@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autômato celular</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Autômato Celular</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Regras</h3>
+                <ul>
+                    <li>Número de vizinhos par: VIVE</li>
+                    <li>Número de vizinhos >= 3: NASCE</li>
+                    <li>Número de vizinhos = 3: MORRE</li>
+                    <li>Número de vizinhos > 6: MORRE</li>
+                    <li>Tem vizinho a direita: NASCE</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Jogo da Morte</h3>
+                <p>Participantes: Cauã Melo, Matheus Pontieri, Gisele de Oliveira, João Víttor Oliveira e Alex Andrade</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="center">
+        <div class="buttons">
+            <button class="btn-primary" onclick="botaoProximaGeracao()">Próxima geração</button>
+            <button class="btn-secondary" onclick="botaoAutomatico()">Automático</button>
+            <button class="btn-secondary" onclick="botaoResetar()">Resetar</button>
+        </div>
+        <p id="generation">Geração 0</p>
+        <small id="liveCells">Células Vivas: 0</small>
+        <div class="cell-container">
+            <!-- Container onde as células serão inseridas -->
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./script.js"></script>
+</html>
