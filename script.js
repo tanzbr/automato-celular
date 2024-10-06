@@ -151,13 +151,17 @@ function getVizinhoDireita(row, col) {
         
         if (celula == true && vizinhos % 2 == 0) { // Se a quantidade de vizinhos for par, VIVE
           celula = true;
-        } else if (celula == false && vizinhos >= 3) { // Se a quantidade de vizinhos for igual ou maior que 3, NASCE
+        } 
+        if (celula == false && vizinhos >= 3) { // Se a quantidade de vizinhos for igual ou maior que 3, NASCE
             celula = true;
-        } else if (celula == true && vizinhos == 3) { // Se a quantidade de vizinhos for igual a 3, MORRE
+        } 
+        if (celula == true && vizinhos == 3) { // Se a quantidade de vizinhos for igual a 3, MORRE
             celula = false;
-        } else if (celula == true && vizinhos > 6) { // Se a quantidade de vizinhos for maior que 6, MORRE
+        } 
+        if (celula == true && vizinhos > 6) { // Se a quantidade de vizinhos for maior que 6, MORRE
             celula = false;
-        } else if (celula == false && getVizinhoDireita(linha, coluna) == true) { // Se tiver vizinho a direita, NASCE
+        } 
+        if (celula == false && getVizinhoDireita(linha, coluna) == true) { // Se tiver vizinho a direita, NASCE
             celula = true;
         } 
         novaLinha.push(celula);
